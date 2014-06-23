@@ -1,0 +1,59 @@
+Variables required by hydrosheds_download.sh
+NB the example values would download the conditioned DEM for the whole of India
+
+*product
+Void-filled DEM/Conditioned DEM/Flow direction at 3sec/15sec/30sec. Format is as follows:
+sa_(dem|con|dir)_(3s|15s|30s)_grid
+where you should select one of dem/con/dir and one of 3s/15s/30s
+e.g. product=sa_con_15s_grid
+
+*continent
+Select one of the following:
+'AF' (Africa)
+'AS' (Asia)
+'au' (Australia)
+'CA' (Central America, Caribbean, Mexico)
+'EU' (Europe)
+'NA' (United States, Canada)
+'SA' (South America)
+e.g. continent=AS
+
+*lon_hemisphere
+Select one of the following:
+'e' (East)
+'w' (West)
+e.g. lon_hemisphere=e
+
+*lat_hemisphere
+Select one of the following:
+'n' (North)
+'s' (South)
+e.g. lat_hemisphere=n
+
+*lon0
+First longitudinal boundary (lon0 < lon1)
+Valid longitude values are 0, 5, 10, ..., 180
+e.g. lon0=65
+
+*lon1
+Second longitudinal boundary
+e.g. lon1=100
+
+*lat0
+First latitudinal boundary (lat0 < lat1)
+Valid latitude values are 0, 5, 10, ..., 90
+e.g. lat0=5
+
+*lat1
+Second latitudinal boundary
+e.g. lat0=35
+
+*safemode
+Either TRUE or FALSE. If TRUE, the program checks for the existence of each 
+file but does not download them.
+e.g. safemode=FALSE
+
+*path
+The destination directory
+e.g. path=/home/simon/hydrosheds/conditioned_dem
+
